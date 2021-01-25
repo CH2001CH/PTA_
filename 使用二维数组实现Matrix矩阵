@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int m = in.nextInt();
+        int n = in.nextInt();
+        matrix a = new matrix(m,n);
+        for(int i=0;i<m;i++)
+        {
+            for(int j=0;j<n;j++)
+                a.data[i][j]=in.nextInt();
+        }
+        n=in.nextInt();
+        int p=in.nextInt();
+        matrix b = new matrix(n,p);
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<p;j++)
+                b.data[i][j]=in.nextInt();
+        }
+        matrix c = matrix.muti(a,b);
+        for(int i=0;i<c.row;i++){
+            for(int j=0;j<c.column;j++)
+                System.out.print(c.data[i][j]+" ");
+            System.out.println();
+        }
+
+    }
+}
